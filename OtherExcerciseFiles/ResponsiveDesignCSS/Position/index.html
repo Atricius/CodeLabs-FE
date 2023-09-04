@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Position</title>
+     <style>
+          body{
+               margin: 0px;
+          }
+/*greater than 1200px */
+          .column{
+               float: left;
+          }
+          .sidebar{
+               width: 25%;
+          }
+          .main-content{
+               width: 50%;
+          }
+          .container{
+            text-align: center;
+            display: flex;
+          }
+          .container-cards{
+               display:flex;
+               padding: 20px;
+               justify-content: space-between;
+               flex-wrap: wrap;
+          }
+          .container-cards img{
+               width: 100%;
+               aspect-ratio: 3 / 2;
+          }
+          .card{
+               max-width: 33%;
+               margin-bottom: 12px;
+               border: 1px solid #ccc;
+               box-sizing: border-box;
+               box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+               padding: 20px;
+          }
+
+          .card-image{
+            position: relative;
+          }
+
+          .card-title{
+            position: absolute;
+            top: 0;
+            left: 10px;
+            color: white;
+            z-index: 10;
+          }
+
+          .overlay{
+            background: black;
+            opacity: 50%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+          }
+/*768px to 1200px */
+          @media screen and (max-width: 1200px) {
+            .card{
+                max-width: calc(50% - 20px);
+            }
+          }
+
+/*480px to 768px */
+          @media screen and (max-width: 768px){
+            .column,
+            .sidebar,
+            .main-content{
+                float: none;
+                width: 100%;
+            }
+
+            .sidebar{
+                display: none;
+            }
+            
+            .card{
+               max-width: calc(50% - 20px);
+            }
+          }
+
+/*480px and below */
+          @media screen and (max-width: 480px){
+               .card{
+                    max-width: 100%;
+               }
+          }
+     </style>
+</head>
+<body>
+     <div class="container">
+        <div class="column sidebar">
+            <h2>Sidebar 1</h2>
+            <p>This is the content for the first sidebar.</p>
+       </div>
+
+       <div class="column main-content">
+            <h2>Main Content</h2>
+            <p>This is the main content area.</p>
+            
+            <div class="container-cards">
+                <div class="card">
+                     <div class="card-image">
+                        <img
+                            src="https://www.adorama.com/alc/wp-content/uploads/2017/11/shutterstock_114802408.jpg"
+                            alt=""
+                        />
+                        <h2 class="card-title">Card 1</h2>
+                        <div class="overlay"></div>
+                    </div>
+                     <p>This is the content for the first card.</p>
+                </div>
+                <div class="card">
+                     <div class="card-image">
+                        <img
+                            src="https://nsucurrent.nova.edu/files/2018/09/landscape-914148_1920-19h7mlc.jpg"
+                            alt=""
+                        />
+                     <h2 class="card-title">Card 2</h2>
+                     <div class="overlay"></div>
+                     </div>
+                     <p>This is the content for the second card.</p>
+                </div>
+                <div class="card">
+                     <div class="card-image">
+                        <img
+                            src="https://cdn-ajggd.nitrocdn.com/kMoOFpDlsOVtlYJLrnSRNCQXaUFHZPTY/assets/images/optimized/rev-814242f/wp-content/uploads/bb-plugin/cache/Beautiful-sky-photography-lisa-fotios-landscape-5de0f1792eafa6f4ec61153e0b9f95df-zybravgx2q47.jpeg"
+                            alt=""
+                        />
+                     <h2 class="card-title">Card 3</h2>
+                     <div class="overlay"></div>
+                     </div>
+                     <p>This is the content for the third card.</p>
+                </div>
+           </div>
+       </div>
+       <div class="column sidebar">
+            <h2>Sidebar 2</h2>
+            <p>This is the content for the second sidebar.</p>
+       </div>
+     </div>
+
+</body>
+</html>
