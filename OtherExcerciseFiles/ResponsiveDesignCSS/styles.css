@@ -1,0 +1,101 @@
+/* Reset some default browser styles */
+body, h1, h2, p, ul, li {
+     margin: 0;
+     padding: 0;
+ }
+ 
+ /* Apply a background color and some basic styles to the body */
+ body {
+     background-color: #f4f4f4;
+     font-family: Arial, sans-serif;
+ }
+ 
+ /* Style the header */
+ header {
+     background-color: #333;
+     color: #fff;
+     padding: 20px;
+     text-align: center;
+ }
+ 
+ header h1 {
+     font-size: 36px;
+ }
+ 
+ nav ul {
+     list-style: none;
+ }
+ 
+ nav li {
+     display: inline;
+     margin-right: 20px;
+ }
+ 
+ nav a {
+     text-decoration: none;
+     color: #fff;
+     font-weight: bold;
+ }
+ 
+ /* Create a container for the three columns */
+ .container {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: space-between;
+     padding: 10px;
+ }
+ 
+ /* Style the individual columns */
+ .services, .main-content, .testimonials {
+     padding: 20px;
+     margin: 10px;
+     flex: 1;
+     min-width: 300px;
+ }
+ 
+ .services {
+     background-color: #e0e0e0;
+     width: 25%;
+     float: left;
+ }
+ 
+ .main-content {
+     background-color: #d0d0d0;
+     width: 50%;
+     float: left;
+ }
+ 
+ .testimonials {
+     background-color: #c0c0c0;
+     width: 25%;
+     float: right;
+ }
+ 
+ /* Style for images */
+
+ .responsiveImage {
+     max-width: 100%;
+     height: auto;
+ }
+ 
+ /* Style the footer */
+ footer {
+     background-color: #333;
+     color: #fff;
+     text-align: center;
+     padding: 5px 0;
+ }
+ 
+ /* Make the layout responsive for smaller screens */
+ /* @media screen and (max-width: 768px) {
+     .container {
+         flex-direction: column;
+     }
+ 
+     .services, .main-content, .testimonials {
+         width: 100%;
+         float: none;
+         margin: 10px 0;
+     }
+ }
+ */
